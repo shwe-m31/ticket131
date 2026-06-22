@@ -16,7 +16,7 @@
 
 **▶️ Watch FlexiGo in action — full end-to-end booking walkthrough**
 
- https://github.com/shwe-m31/ticket131/blob/main/Project1.mp4
+https://github.com/user-attachments/assets/40ee5024-83c9-48cc-8abc-36e03aa8f765
 
 </div>
 
