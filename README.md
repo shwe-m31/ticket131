@@ -198,39 +198,6 @@ A secure multi-method gateway supporting Cards, UPI, Wallets, and Net Banking. P
 - 📱 Native mobile app (iOS & Android)
 
 ---
-
-## ⚙️ Getting Started
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/flexigo.git
-cd flexigo
-
-# 2. Import the database
-#    Open phpMyAdmin → Import → select flexigo.sql
-
-# 3. Configure DB connection
-#    Edit config/db.php with your MySQL credentials
-
-# 4. Start local server
-php -S localhost:8000
-
-# 5. Open in browser
-#    http://localhost:8000
-```
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="400"/>
-
 **⭐ If you found this project useful, give it a star!**
 
 *Made with ❤️ — FlexiGo: Book Everything, Everywhere*
