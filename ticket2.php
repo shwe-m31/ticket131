@@ -7,11 +7,13 @@ session_start();
     //exit();
 //}
 
-$concert = $_SESSION['concert'];
-$_SESSION['user'] = 'some_user_id';  // e.g., from login
+$concert = $_SESSION['concert'] ?? [];
+// Keep the existing session-driven ticket flow, while carrying the payment
+// field posted by payment2.php (which uses payment_method).
+$_SESSION['user'] = $_SESSION['email'] ?? 'Guest';
 $_SESSION['ticket_number'] = 'TCKT' . rand(1000, 9999);
 $_SESSION['booked_on'] = date('Y-m-d');
-$_SESSION['payment_mode'] = $_POST['payment_mode'] ?? 'UPI'; // Example: "UPI", "Card"
+$_SESSION['payment_mode'] = $_POST['payment_method'] ?? $_POST['payment_mode'] ?? 'UPI';
 $ticket_no = $_SESSION['ticket_number'];
 $booked_on = $_SESSION['booked_on'];
 
@@ -25,8 +27,7 @@ if (isset($_GET['download']) && $_GET['download'] === 'true') {
     $ticket .= "Time: {$concert['time']}\n";
     $ticket .= "Venue: {$concert['venue']}\n";
     $ticket .= "Payment Mode: {$_SESSION['payment_mode']}\n";
-    $ticket .= "User Name: {$user['name']}\n";
-    $ticket .= "Email: {$user['email']}\n";
+    $ticket .= "User: {$_SESSION['user']}\n";
     $ticket .= "Ticket Number: {$ticket_no}\n";
     $ticket .= "Booked On: {$booked_on}\n";
 
